@@ -9,9 +9,11 @@ import SwiftUI
 
 struct MoodTrackerView: View {
     
-    @State private var speed = 0.0
+    @StateObject private var moodTrackerVM = MoodTrackerVM()
+    
+    @State private var moodScale = 0.0
     @State private var isEditing = false
-    @State private var textField = ""
+    @State private var noteField = ""
     
     var body: some View {
         Text("How do you feel today")
@@ -20,12 +22,12 @@ struct MoodTrackerView: View {
             .bold()
         
         Slider(
-            value: $speed,
-            in: 0...10) { editing in
-                isEditing = editing
+            value: $moodTrackerVM.moodScale,
+            in: 0...10, step: 1) { editing in
+                moodTrackerVM.isEditing = editing
             }
             .padding()
-        Text(String(isEditing) + " \(speed)")
+        Text(String(moodTrackerVM.isEditing) + " \(moodTrackerVM.moodScale)")
         
         VStack{
             Text("What Emotion Did You Feel Today")
@@ -42,11 +44,11 @@ struct MoodTrackerView: View {
             
         }
         
-        Text("How do you feel today")
+        Text("Any Extra Notes?")
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             .bold()
-        TextField("Enter stuff here", text: $textField)
+        TextField("Enter stuff here", text: $moodTrackerVM.noteField)
             .padding()
         Spacer()
     }
