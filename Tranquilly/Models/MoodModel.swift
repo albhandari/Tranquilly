@@ -10,10 +10,12 @@ import Foundation
 struct Mood: Codable{
     var moodScale: Int //Scale from 1 to 10
     var emotion: Emotion //Emotion Type
+    var notes: String
     
-    init(moodScale: Int, emotion: Emotion) {
+    init(moodScale: Int, emotion: Emotion, notes: String) {
         self.moodScale = moodScale
         self.emotion = emotion
+        self.notes = notes
     }
 }
 
