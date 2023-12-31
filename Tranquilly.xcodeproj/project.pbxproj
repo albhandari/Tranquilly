@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF653F082B412B7500AF5BD8 /* MoodTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF653F072B412B7500AF5BD8 /* MoodTrackerView.swift */; };
+		CF653F0C2B412BAD00AF5BD8 /* MoodTrackerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF653F0B2B412BAD00AF5BD8 /* MoodTrackerVM.swift */; };
+		CF653F0F2B412E3000AF5BD8 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF653F0E2B412E3000AF5BD8 /* MoodModel.swift */; };
 		CFC45CC72B3BF75A00233935 /* TranquillyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC45CC62B3BF75A00233935 /* TranquillyApp.swift */; };
 		CFC45CC92B3BF75A00233935 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC45CC82B3BF75A00233935 /* ContentView.swift */; };
 		CFC45CCB2B3BF75D00233935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC45CCA2B3BF75D00233935 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF653F072B412B7500AF5BD8 /* MoodTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerView.swift; sourceTree = "<group>"; };
+		CF653F0B2B412BAD00AF5BD8 /* MoodTrackerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerVM.swift; sourceTree = "<group>"; };
+		CF653F0E2B412E3000AF5BD8 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
 		CFC45CC32B3BF75A00233935 /* Tranquilly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tranquilly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC45CC62B3BF75A00233935 /* TranquillyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranquillyApp.swift; sourceTree = "<group>"; };
 		CFC45CC82B3BF75A00233935 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF653F042B412B1800AF5BD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF653F072B412B7500AF5BD8 /* MoodTrackerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF653F062B412B3500AF5BD8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CF653F0B2B412BAD00AF5BD8 /* MoodTrackerVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CF653F0D2B412DF900AF5BD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF653F0E2B412E3000AF5BD8 /* MoodModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CFC45CBA2B3BF75900233935 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +81,9 @@
 		CFC45CC52B3BF75A00233935 /* Tranquilly */ = {
 			isa = PBXGroup;
 			children = (
+				CF653F0D2B412DF900AF5BD8 /* Models */,
+				CF653F062B412B3500AF5BD8 /* ViewModels */,
+				CF653F042B412B1800AF5BD8 /* Views */,
 				CFC45CC62B3BF75A00233935 /* TranquillyApp.swift */,
 				CFC45CC82B3BF75A00233935 /* ContentView.swift */,
 				CFC45CCA2B3BF75D00233935 /* Assets.xcassets */,
@@ -137,6 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF653F0F2B412E3000AF5BD8 /* MoodModel.swift in Sources */,
+				CF653F0C2B412BAD00AF5BD8 /* MoodTrackerVM.swift in Sources */,
+				CF653F082B412B7500AF5BD8 /* MoodTrackerView.swift in Sources */,
 				CFC45CC92B3BF75A00233935 /* ContentView.swift in Sources */,
 				CFC45CC72B3BF75A00233935 /* TranquillyApp.swift in Sources */,
 			);
