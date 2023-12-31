@@ -50,8 +50,20 @@ struct MoodTrackerView: View {
             .bold()
         TextField("Enter stuff here", text: $moodTrackerVM.noteField)
             .padding()
+        
+        Button("Save") {
+            print("Button tapped!")
+            
+            //if moodScale, emotion, and extra not exists, then update the mood,
+            //if not then we can have a view that shows up saying fill stuff out
+        }
+        
         Spacer()
+        
+        
     }
+    
+    
 }
 
 #Preview {
