@@ -11,12 +11,8 @@ struct MoodTrackerView: View {
     
     @StateObject private var moodTrackerVM = MoodTrackerVM()
     
-    @State private var moodScale = 0.0
-    @State private var isEditing = false
-    @State private var noteField = ""
-    
     var body: some View {
-        Text("How do you feel today")
+        Text("How would you rate your day today?")
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             .bold()
@@ -55,7 +51,10 @@ struct MoodTrackerView: View {
             .padding()
         
         Button("Save") {
-            print("Button tapped!")
+            moodTrackerVM.updateMood()
+            print(moodTrackerVM.mood?.moodScale)
+            print(moodTrackerVM.mood?.notes)
+            print(moodTrackerVM.mood?.emotion.rawValue)
             
             //if moodScale, emotion, and extra not exists, then update the mood,
             //if not then we can have a view that shows up saying fill stuff out
