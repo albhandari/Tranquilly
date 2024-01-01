@@ -12,6 +12,7 @@ class MoodTrackerVM: ObservableObject{
     @Published var moodScale = 0.0
     @Published var isEditing = false
     @Published var noteField = ""
+    @Published var emotion: Emotion?
     
     init(){
         

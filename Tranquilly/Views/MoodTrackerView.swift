@@ -35,13 +35,16 @@ struct MoodTrackerView: View {
                 .padding()
                 .bold()
             
-            List {
-                ForEach((1...3), id: \.self) {
-                    Text("Item \($0)")
+            List(Emotion.allCases) { emotion in
+                Text(emotion.rawValue).onTapGesture {
+                    moodTrackerVM.emotion = Emotion(rawValue: emotion.rawValue)
                 }
                 
-            }.frame(maxHeight: 200)
+            }.frame(maxHeight: 300)
             
+        }
+        if let testing = moodTrackerVM.emotion{
+            Text("Emotion elected: \(testing.rawValue)")
         }
         
         Text("Any Extra Notes?")

@@ -19,11 +19,12 @@ struct Mood: Codable{
     }
 }
 
-enum Emotion: String, Codable, CaseIterable{
-    case anrgy = "Angry"
+enum Emotion: String, Codable, CaseIterable, Identifiable{
+    var id : String { UUID().uuidString }
+    case angry = "Angry"
     case happy = "Happy"
     case sad = "Sad"
     case tired = "Tired"
-    case axnious = "Anxious"
+    case anxious = "Anxious"
 }
 
