@@ -52,9 +52,9 @@ struct MoodTrackerView: View {
         
         Button("Save") {
             moodTrackerVM.updateMood()
-            print(moodTrackerVM.mood?.moodScale)
-            print(moodTrackerVM.mood?.notes)
-            print(moodTrackerVM.mood?.emotion.rawValue)
+            print(moodTrackerVM.mood?.moodScale ?? -1)
+            print(moodTrackerVM.mood?.notes ?? "Empty String-> Error")
+            print(moodTrackerVM.mood?.emotion.rawValue ?? "Invalid")
             
             //if moodScale, emotion, and extra not exists, then update the mood,
             //if not then we can have a view that shows up saying fill stuff out
